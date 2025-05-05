@@ -117,7 +117,7 @@ nav {
         "news1 news2 news3"
         "news1 news4 news5"
     ;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
     width: 100%;
