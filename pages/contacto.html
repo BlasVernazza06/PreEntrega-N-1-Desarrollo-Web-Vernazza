@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - Colegio San Martín</title>
+  <link rel="stylesheet" href="../assets/css/contacto.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./niveles.html">Niveles</a></li>
+          <li><a href="./novedades.html">Novedades</a></li>
+          <li><a href="./personal.html">Personal</a></li>
+          <li><a href="./contacto.html" class="active">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-sec">
+      <div class="form-header">
+        <h2>Contacto</h2>
+        <p>Envíanos tu consulta o mensaje, te responderemos a la brevedad.</p>
+      </div>
+      <form class="form-container">
+        <div class="first-row">
+          <div class="input-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Escribe tu nombre" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Escribe tu email" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="Asunto">Asunto</label>
+          <textarea id="Asunto" name="Asunto" placeholder="Escribe tu mensaje" rows="6" required></textarea>
+        </div>
+        <div class="button-container">
+          <button type="submit">Enviar mensaje</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="info-sec">
+      <div class="info-text-container">
+        <h2>Horarios de Atención</h2>
+        <p><strong>Secretaría:</strong> Lunes a Viernes de 8:00 a 16:00</p>
+        <p><strong>Preceptoría:</strong> Lunes a Viernes de 9:00 a 17:00</p>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209932.7218827303!2d-58.61068998838619!3d-34.700165920652296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc454f9c64c5%3A0xc3cc709aa6e34b0e!2sColegio%20San%20MARTIN!5e0!3m2!1ses!2sar!4v1744165391986!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="footer-title-text">Contactanos</p>
+      <p>📍 Av. Siempreviva 123, Ciudad Educativa</p>
+      <p>📞 (011) 1234-5678</p>
+      <p>✉️ contacto@colegiosanmartin.edu.ar</p>
+    </div>
+    <p class="copyright">© 2024 Colegio San Martín. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

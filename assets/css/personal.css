@@ -1,0 +1,190 @@
+/* Estilos básicos */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ 
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* Navegación */
+.header-nav {
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: #fff; /* Texto blanco */
+}
+ 
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff; /* Fondo blanco para el menú */
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+ 
+.menu a {
+    color: #004080;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+ 
+ 
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+ 
+.menu ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+ 
+.menu ul li:hover {
+    background-color: #cce4ff;
+    border-radius: 20px;
+}
+ 
+.award-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Personal */
+
+.personal-sec {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 5rem;
+}
+  
+.personal-sec header h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004080; 
+}
+
+.personal-header p{
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.personal-sec header p {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+  
+
+.title-article p {
+    color: #004080;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.directivos-container,
+.docentes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+  
+.directivo-card,
+.docente-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 180px;
+}
+  
+.directivo-card img,
+.docente-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+}
+  
+.directivo-card h3,
+.docente-card h3 {
+    margin: 0.5rem 0 0.2rem;
+    font-size: 1.1rem;
+}
+  
+.directivo-card p,
+.docente-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+ 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white; /* Texto blanco */
+}
+ 
+.footer-title-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+ 
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+}
+
+.footer-title-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
