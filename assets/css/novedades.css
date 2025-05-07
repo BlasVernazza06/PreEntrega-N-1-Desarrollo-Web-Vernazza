@@ -86,7 +86,7 @@ nav {
 
 /* Imagen de portada */
 .pic-sec {
-    background-image: url(../../img/backgroundInicio.jpg);
+    background-image: url(/img/novedades.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,26 +126,56 @@ nav {
 }
 
 .news1 {
+    background-image: url(/img/catequesis.jpg);
     grid-area: news1;
     grid-row: span 2;
     height: 100%;
     min-height: 420px; /* Altura mínima para asegurar que ocupe todo el espacio */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.news2 {
+    background-image: url(/img/biologia.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.news3 {
+    background-image: url(/img/historia.webp);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.news4 {
+    background-image: url(/img/EstudiantesAprendiendo.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+
+.news5 {
+    background-image: url(/img/matematica.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
 }
 
 .news-container > div {
-    background-image: url(../../img/backgroundInicio.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 200px;
-    width: 100%;
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 01, 0.3);
     color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 15px;
     transition: transform 0.3s ease;
 }
