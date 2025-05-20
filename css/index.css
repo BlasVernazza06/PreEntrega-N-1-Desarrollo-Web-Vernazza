@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  color: #333;
+}
+
+.header-nav {
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  color: #ffffff;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border: 1px solid #cce4ff;
+  overflow: hidden;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.menu ul li {
+  margin: 0 10px;
+  padding: 10px;
+}
+.menu ul li:hover {
+  background-color: #cce4ff;
+  border-radius: 20px;
+}
+.menu a {
+  color: #004080;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.inicio {
+  height: 70vh;
+  background-image: url("../img/BackgroundInicio3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  margin-bottom: 70px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.inicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.inicio-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 700px;
+  width: 30%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.inicio h1 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.inicio p {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.btn-primary {
+  background-color: #004080;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-primary:hover {
+  background-color: #003060;
+}
+
+.appointment-sec {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding: 60px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: auto;
+}
+.appointment-sec .appointment-text-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.appointment-sec .appointment-text-container p {
+  font-weight: bold;
+  line-height: 1.8;
+  font-size: 32px;
+}
+.appointment-sec .appointment-text-container .features-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 30px;
+}
+.appointment-sec .appointment-text-container .features-list li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #444;
+}
+.appointment-sec .appointment-text-container .features-list li span {
+  font-size: 22px;
+}
+.appointment-sec-img-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appointment-sec-img-container img {
+  width: 100%;
+  height: 80%;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.awards-sec {
+  padding: 60px 20px;
+  text-align: center;
+}
+.awards-sec h2 {
+  font-size: 32px;
+  color: #004080;
+  margin-bottom: 40px;
+}
+.awards-sec .awards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 120px;
+}
+.awards-sec .awards-container .award-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 400px;
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.awards-sec .awards-container .award-card:hover {
+  transform: scale(1.02);
+}
+.awards-sec .awards-container .award-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.awards-sec .awards-container .award-card-text {
+  padding: 20px;
+  text-align: left;
+}
+.awards-sec .awards-container .award-card-text h3 {
+  font-size: 20px;
+  color: #004080;
+  margin-bottom: 10px;
+}
+.awards-sec .awards-container .award-card-text p {
+  font-size: 16px;
+}
+
+footer {
+  background-color: #004080;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+}
+footer .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+footer .footer-title-text {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+footer .copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=index.css.map */

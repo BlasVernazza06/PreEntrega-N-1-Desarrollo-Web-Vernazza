@@ -1,0 +1,226 @@
+@import './colors';
+@import './mixins';
+@import './responsive';
+
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: $font-main;
+    background: $color-background;
+    color: $color-dark;
+  }
+  
+// =======================
+// NAVIGATION
+// =======================
+.header-nav{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.25rem;  /* px-1 = 4px */
+  padding-right: 0.25rem;    /* font-medium */
+  border-radius: 9999px;  /* rounded-full */
+  color: #4B5563;         /* text-gray-600 */
+  justify-content: center;
+  align-items: center;
+  @include flex-center;
+  @include mobile-small {
+    padding: 10px;
+  }
+  animation: nav-shadow 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes nav-shadow {
+  0% {
+    border: 1px solid transparent;
+  }
+  to {
+    background-color: white;
+    border: 1px solid #ddd
+      
+  }
+}
+
+.menu {
+  @include flex-row;
+  justify-content: space-between;
+  border-radius: 30px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    @include flex-center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    li {
+      margin: 0 10px;
+      padding: 10px;
+
+      &:hover {
+        background-color: $color-hover;
+        border-radius: 20px;
+      }
+
+      a {
+        color: $color-primary;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    
+        @include mobile-small {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include mobile-small {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  @include mobile-small {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: visible;
+    gap: 10px;
+  }
+}
+
+// =======================
+// SECCIÓN INICIO
+// =======================
+  
+
+  
+  /* Personal */
+.personal-sec {
+  @include flex-column;
+  margin-top: 120px;
+  padding: 2rem;
+  gap: 5rem;
+
+  header{
+    @include flex-center;
+  }
+  
+  .personal-header { 
+    @include flex-column;
+    p {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-size: 3rem;
+      font-weight: bold;
+      color: $color-primary;
+      }
+    
+    span {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+  }
+  
+  
+  .title-article {
+    p {
+      color: $color-primary;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .directivos-container,
+  .docentes-container {
+    @include flex-wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .directivo-card,
+  .docente-card {
+    background-color: $color-white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px $color-shadow;
+    width: 180px;
+  
+    img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      object-fit: cover;
+    }
+  
+    h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.1rem;
+    }
+  
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  }
+} 
+  /* Footer */
+footer {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 30px 20px;
+  text-align: center;
+  
+  .footer-content {
+    @include flex-column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    color: $color-white;
+  }
+
+  .footer-title-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-info {
+    @include flex-row;
+    gap: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid $color-subtext;
+  }
+}

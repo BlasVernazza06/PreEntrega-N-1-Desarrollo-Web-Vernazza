@@ -1,0 +1,28 @@
+// Mixin para móviles pequeños (max-width: 480px)
+@mixin mobile-small {
+    @media (max-width: 480px) {
+      @content;
+    }
+}
+  
+// Mixin para tablets (481px a 768px)
+@mixin tablet {
+    @media (min-width: 481px) and (max-width: 768px) {
+      @content;
+    }
+}
+  
+// Mixin para laptops (769px a 1024px)
+@mixin laptop {
+    @media (min-width: 769px) and (max-width: 1024px) {
+      @content;
+    }
+}
+  
+// Mixin para pantallas grandes (> 1024px)
+@mixin desktop {
+    @media (min-width: 1025px) {
+      @content;
+    }
+}
+  

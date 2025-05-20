@@ -1,0 +1,262 @@
+@import './colors';
+@import './mixins';
+@import './responsive';
+
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: $font-main;
+    background: $color-background;
+    color: $color-dark;
+  }
+  
+// =======================
+// NAVIGATION
+// =======================
+header{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0.25rem;  /* px-1 = 4px */
+  padding-right: 0.25rem;    /* font-medium */
+  border-radius: 9999px;  /* rounded-full */
+  color: #4B5563;         /* text-gray-600 */
+  justify-content: center;
+  align-items: center;
+  @include flex-center;
+  @include mobile-small {
+    padding: 10px;
+  }
+  animation: nav-shadow 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes nav-shadow {
+  0% {
+    border: 1px solid transparent;
+  }
+  to {
+    background-color: white;
+    border: 1px solid #ddd
+      
+  }
+}
+
+.menu {
+  @include flex-row;
+  justify-content: space-between;
+  border-radius: 30px;
+  overflow: hidden;
+
+  ul {
+    list-style: none;
+    @include flex-center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    li {
+      margin: 0 10px;
+      padding: 10px;
+
+      &:hover {
+        background-color: $color-hover;
+        border-radius: 20px;
+      }
+
+      a {
+        color: $color-primary;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+    
+        @include mobile-small {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @include mobile-small {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  @include mobile-small {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: visible;
+    gap: 10px;
+  }
+}
+
+// =======================
+// SECCIÓN INICIO
+// =======================
+  
+  /* Título principal */
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 120px;
+    padding: 0 20px;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: $color-primary;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      color: $color-muted;
+    }
+  }
+  
+  /* Imagen de portada */
+  .pic-sec {
+    background-image: url(/img/novedades.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    margin: 40px 20px;
+    border-radius: 20px;
+  }
+  
+  /* Sección de noticias */
+  .news-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding: 0 20px;
+  
+    h2 {
+      font-size: 2rem;
+      color: $color-primary;
+      margin-bottom: 30px;
+    }
+  }
+  
+  .news-container {
+    display: grid;
+    grid-template-areas:
+      "news1 news2 news3"
+      "news1 news4 news5";
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    > div {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px $color-shadow;
+      color: $color-white;
+      padding: 15px;
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.05);
+      }
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+  }
+  
+  .news1 {
+    grid-area: 'news1';
+    background-image: url(/img/catequesis.jpg);
+    grid-area: news1;
+    grid-row: span 2;
+    min-height: 420px;
+  }
+  
+  .news2 { grid-area: 'news2'; background-image: url(/img/biologia.jpg); }
+  .news3 { grid-area: 'news3'; background-image: url(/img/historia.webp); }
+  .news4 { grid-area: 'news4'; background-image: url(/img/EstudiantesAprendiendo.jpeg); }
+  .news5 { grid-area: 'news5'; background-image: url(/img/matematica.jpg); }
+  
+  /* Sección Redes Sociales */
+  .social-sec {
+    text-align: center;
+    margin-top: 120px;
+  
+    h2 {
+      font-size: 2rem;
+      color: $color-primary;
+      margin-bottom: 20px;
+    }
+  
+    .social-container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 70px;
+      align-items: center;
+  
+      p {
+        font-weight: 600;
+        color: #444;
+      }
+    }
+  }
+  
+  /* Footer */
+  footer {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .footer-title-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-content {
+    width: 80%;
+    border-bottom: 1px solid gray;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+  
+  footer p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
