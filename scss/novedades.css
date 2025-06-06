@@ -57,16 +57,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   -webkit-animation: nav-shadow 1s linear both;
           animation: nav-shadow 1s linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
-}
-
-@media (max-width: 480px) {
-  nav {
-    padding: 10px;
-  }
 }
 
 @-webkit-keyframes nav-shadow {
@@ -100,7 +95,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -118,12 +113,17 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 10px;
+  padding: 7px;
 }
 
 .menu ul li {
-  margin: 0 10px;
-  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px;
 }
 
 .menu ul li:hover {
@@ -132,50 +132,13 @@ nav {
 }
 
 .menu ul li a {
+  padding: 3px;
+  font-size: 16px;
   color: #004080;
   font-weight: 600;
   text-decoration: none;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
-}
-
-@media (max-width: 480px) {
-  .menu ul li a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 15px;
-    overflow: visible;
-    gap: 10px;
-  }
 }
 
 /* Título principal */
@@ -288,7 +251,7 @@ nav {
 
 .news1 {
   grid-area: 'news1';
-  background-image: url(/img/catequesis.jpg);
+  background-image: url(/img/catequesis.webp);
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
@@ -299,7 +262,7 @@ nav {
 
 .news2 {
   grid-area: 'news2';
-  background-image: url(/img/biologia.jpg);
+  background-image: url(/img/biologia.webp);
 }
 
 .news3 {
@@ -309,7 +272,7 @@ nav {
 
 .news4 {
   grid-area: 'news4';
-  background-image: url(/img/EstudiantesAprendiendo.jpeg);
+  background-image: url(/img/EstudiantesAprendiendo.webp);
 }
 
 .news5 {

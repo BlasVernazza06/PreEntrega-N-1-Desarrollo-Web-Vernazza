@@ -56,16 +56,11 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   -webkit-animation: nav-shadow 1s linear both;
           animation: nav-shadow 1s linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
-}
-
-@media (max-width: 480px) {
-  nav {
-    padding: 10px;
-  }
 }
 
 @-webkit-keyframes nav-shadow {
@@ -99,7 +94,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -117,12 +112,17 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 10px;
+  padding: 3px;
 }
 
 .menu ul li {
-  margin: 0 10px;
-  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3px;
 }
 
 .menu ul li:hover {
@@ -131,6 +131,8 @@ nav {
 }
 
 .menu ul li a {
+  padding: 3px;
+  font-size: 16px;
   color: #004080;
   font-weight: 600;
   text-decoration: none;
@@ -138,48 +140,9 @@ nav {
   transition: background-color 0.3s, color 0.3s;
 }
 
-@media (max-width: 480px) {
-  .menu ul li a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 15px;
-    overflow: visible;
-    gap: 10px;
-  }
-}
-
 .inicio {
   height: 70vh;
-  background-image: url("../img/BackgroundInicio3.jpg");
+  background-image: url("../img/BackgroundInicio3.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -209,6 +172,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -221,11 +185,24 @@ nav {
           flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  min-width: 580px;
-  width: 30%;
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .inicio-content {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inicio-content {
+    max-width: 400px;
+  }
 }
 
 .inicio h1 {
@@ -239,6 +216,15 @@ nav {
   color: #ffffff;
   margin-bottom: 30px;
   line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .inicio h1 {
+    font-size: 32px;
+  }
+  .inicio p {
+    font-size: 14px;
+  }
 }
 
 .btn-primary {
@@ -260,10 +246,10 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 40px;
   padding: 60px;
   background-color: #ffffff;
@@ -274,13 +260,12 @@ nav {
   margin: auto;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 769px) {
   .appointment-sec {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin: 10px 20px;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 

@@ -40,9 +40,7 @@ nav {
   justify-content: center;
   align-items: center;
   @include flex-center;
-  @include mobile-small {
-    padding: 10px;
-  }
+  padding: 10px;
   animation: nav-shadow 1s linear both;
   animation-timeline: scroll();
   animation-range: 0 100px;
@@ -62,18 +60,19 @@ nav {
 .menu {
   @include flex-row;
   justify-content: space-between;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
 
   ul {
     list-style: none;
     @include flex-center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 7px;
 
     li {
-      margin: 0 10px;
-      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      padding: 3px;
 
       &:hover {
         background-color: $color-hover;
@@ -81,32 +80,14 @@ nav {
       }
 
       a {
+        padding: 3px;
+        font-size: 16px;
         color: $color-primary;
         font-weight: 600;
         text-decoration: none;
         transition: background-color 0.3s, color 0.3s;
-    
-        @include mobile-small {
-          font-size: 14px;
-        }
       }
     }
-
-    @include mobile-small {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-  }
-
-  @include mobile-small {
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
-    justify-content: center;
-    border-radius: 15px;
-    overflow: visible;
-    gap: 10px;
   }
 }
 
